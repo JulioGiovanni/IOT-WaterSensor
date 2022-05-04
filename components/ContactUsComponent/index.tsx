@@ -110,7 +110,7 @@ export function GetInTouch() {
       <div className={classes.wrapper}>
         <div className={classes.contacts}>
           <Text size="lg" weight={700} className={classes.title} sx={{ color: '#fff' }}>
-            Contact information
+            Informacion de contacto
           </Text>
 
           <ContactIconsList variant="white" />
@@ -118,7 +118,7 @@ export function GetInTouch() {
 
         <form className={classes.form} onSubmit={(event) => event.preventDefault()}>
           <Text size="lg" weight={700} className={classes.title}>
-            Get in touch
+           Contactanos!
           </Text>
 
           <div className={classes.fields}>

@@ -15,17 +15,17 @@ export default function HomePage() {
         description="Mantine is a next-generation web application framework for building modern web applications."
         data={[
           {
-            image: '/images/feature-1.svg',
+            image: '/images/accountants.svg',
             title: 'Flexible',
             description: 'Mantein is built on top of React and React Native, and is designed to be flexible and easy to use.',
           },
           {
-            image: '/images/feature-2.svg',
+            image: '/images/auditors.svg',
             title: 'Scalable',
             description: 'Mantein is built on top of React and React Native, and is designed to be flexible and easy to use.',
           },
           {
-            image: '/images/feature-3.svg',
+            image: '../images/lawyer.svg',
             title: 'Secure',
             description: 'Mantein is built on top of React and React Native, and is designed to be flexible and easy to use.',
           },
@@ -33,7 +33,6 @@ export default function HomePage() {
       />
       <FaqSimple/>
       <GetInTouch/>
-      <ColorSchemeToggle />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Container, Title, Accordion, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme, _params, getRef) => {
@@ -42,8 +42,13 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const placeholder =
-  'It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.';
-
+'La competencia que tiene el mercado es algo escaso, ya que los productos actuales tienen un problema de solo plasmar el error y no forzar al usuario a hacer algo al respecto.'
+const placeholder2=
+'La diferencia es que nosotros damos enfasis lo que perjudica tener un filtro no funcional en algo tan importante como es tomar agua de dispensador dentro de tu casa.'
+const placeholder3=
+'El costo esperado ????'//tu lo pones xd
+const placeholder4=
+'La informacion ademas de tener una alerta de tus dispensadores de agua, fuerza que el usuario haga algo al respecto.'
 export function FaqSimple() {
   const { classes } = useStyles();
   return (
@@ -60,17 +65,10 @@ export function FaqSimple() {
           control: classes.control,
         }}
       >
-        <Accordion.Item label="How can I reset my password?">{placeholder}</Accordion.Item>
-        <Accordion.Item label="Can I create more that one account?">{placeholder}</Accordion.Item>
-        <Accordion.Item label="Do you store credit card information securely?">
-          {placeholder}
-        </Accordion.Item>
-        <Accordion.Item label="What payment systems to you work with?">
-          {placeholder}
-        </Accordion.Item>
-        <Accordion.Item label="How can I subscribe to monthly newsletter?">
-          {placeholder}
-        </Accordion.Item>
+        <Accordion.Item label="Cual es la competencia en contra del mercado?">{placeholder}</Accordion.Item>
+        <Accordion.Item label="Cual es la diferencia entre la competencia?">{placeholder2}</Accordion.Item>
+        <Accordion.Item label="Cual es el costo esperado?">{placeholder3}</Accordion.Item>
+        <Accordion.Item label="Que puedo hacer con la informacion plasmada?">{placeholder4}</Accordion.Item>
       </Accordion>
     </Container>
   );

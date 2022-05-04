@@ -79,10 +79,8 @@ interface ContactIconsListProps {
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'hello@mantine.dev', icon: At },
-  { title: 'Phone', description: '+49 (800) 335 35 35', icon: Phone },
-  { title: 'Address', description: '844 Morris Park avenue', icon: MapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: Sun },
+  { title: 'Email', description: 'is726802@iteso.mx', icon: At },
+  { title: 'Phone', description: '+52 (333) 54 83 373 ', icon: Phone }
 ];
 
 export function ContactIconsList({ data = MOCKDATA, variant }: ContactIconsListProps) {

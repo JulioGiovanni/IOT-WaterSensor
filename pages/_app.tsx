@@ -33,7 +33,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           <HeaderAction 
             links={[
               {
-                label: 'Home',
+                label: 'AquaSystem',
                 link: '/',
               },
             ]}  
