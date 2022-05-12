@@ -46,7 +46,7 @@ const placeholder =
 const placeholder2=
 'La diferencia es que nosotros damos enfasis lo que perjudica tener un filtro no funcional en algo tan importante como es tomar agua de dispensador dentro de tu casa.'
 const placeholder3=
-'El costo esperado ????'//tu lo pones xd
+'Será una suscripción mensual de $500 pesos, en la cual vendrá incluido el filtro y el acceso a la app.'
 const placeholder4=
 'La informacion ademas de tener una alerta de tus dispensadores de agua, fuerza que el usuario haga algo al respecto.'
 export function FaqSimple() {
@@ -54,7 +54,7 @@ export function FaqSimple() {
   return (
     <Container size="sm" className={classes.wrapper}>
       <Title align="center" className={classes.title}>
-        Frequently Asked Questions
+        Preguntas Frecuentes
       </Title>
 
       <Accordion

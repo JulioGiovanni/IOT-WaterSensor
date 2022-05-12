@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   createStyles,
   Menu,
@@ -78,16 +78,17 @@ export function HeaderAction({ links }: HeaderActionProps) {
           placement="end"
           gutter={1}
           control={
+            <Link href={link.link} passHref>
             <a
               href={link.link}
               className={classes.link}
-              onClick={(event) => event.preventDefault()}
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
                 <ChevronDown size={12} />
               </Center>
             </a>
+            </Link>
           }
         >
           {menuItems}
@@ -96,14 +97,15 @@ export function HeaderAction({ links }: HeaderActionProps) {
     }
 
     return (
+      <Link href={link.link} passHref>
       <a
         key={link.label}
         href={link.link}
         className={classes.link}
-        onClick={(event) => event.preventDefault()}
       >
         {link.label}
       </a>
+      </Link>
     );
   });
 

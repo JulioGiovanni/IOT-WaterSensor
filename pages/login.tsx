@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Paper,
   createStyles,
@@ -10,6 +9,7 @@ import {
   Text,
   Anchor,
 } from '@mantine/core';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -50,25 +50,32 @@ export default function AuthenticationImage() {
   const { classes } = useStyles();
   return (
     <div className={classes.wrapper}>
+      <form action="" method="post">
       <Paper className={classes.form} radius={0} p={30}>
         <Title order={2} className={classes.title} align="center" mt="md" mb={50}>
-          Welcome back to Mantine!
+         Bienvenido a AquaSystem
         </Title>
-
-        <TextInput label="Email address" placeholder="hello@gmail.com" size="md" />
-        <PasswordInput label="Password" placeholder="Your password" mt="md" size="md" />
+        <Title order={3} className={classes.title} align={"center"} mt="md" mb={50}>
+            Inicio de sesión
+        </Title>
+        <TextInput label="Correo" placeholder="hello@gmail.com" size="md" />
+          <PasswordInput label="Contraseña" placeholder="Your password" mt="md" size="md" />
         <Checkbox label="Keep me logged in" mt="xl" size="md" />
         <Button fullWidth mt="xl" size="md">
           Login
         </Button>
 
         <Text align="center" mt="md">
-          Don&apos;t have an account?{' '}
-          <Anchor<'a'> href="#" weight={700} onClick={(event) => event.preventDefault()}>
-            Register
+          No tienes cuenta?{' '}
+          <Link href={"/register"} passHref>
+          
+          <Anchor<'a'> href="/register" weight={700}>
+            Registrate
           </Anchor>
+          </Link>
         </Text>
       </Paper>
+      </form>
     </div>
   );
 }

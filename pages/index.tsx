@@ -11,23 +11,23 @@ export default function HomePage() {
     <>
       <HeroImageBackground />
       <FeaturesImages
-        supTitle="Features"
-        description="Mantine is a next-generation web application framework for building modern web applications."
+        supTitle="Caracteristicas"
+        description="Sabes que tan 'pura' es tu agua gracias a los filtros que tiene tu dispensador de agua?"
         data={[
           {
             image: '/images/accountants.svg',
-            title: 'Flexible',
-            description: 'Mantein is built on top of React and React Native, and is designed to be flexible and easy to use.',
+            title: 'Informacion',
+            description: 'te da informacion tiempo real de la calidad del agua que estas usando para multiples cosas dentro y fuera de tu casa o oficina',
           },
           {
             image: '/images/auditors.svg',
-            title: 'Scalable',
-            description: 'Mantein is built on top of React and React Native, and is designed to be flexible and easy to use.',
+            title: 'Cuidado',
+            description: 'Te mantiene seguro al momento de ingerir agua, muchas veces no tenemos un cuidado especifico o no sabemos si mi dispensador de agua ya requiere cambio',
           },
           {
             image: '../images/lawyer.svg',
-            title: 'Secure',
-            description: 'Mantein is built on top of React and React Native, and is designed to be flexible and easy to use.',
+            title: 'info',
+            description: 'idk texto extra.',
           },
         ]}
       />

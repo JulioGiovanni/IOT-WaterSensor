@@ -89,7 +89,7 @@ export function FeaturesImages({ supTitle, description, data }: FeaturesImagesPr
       <Text className={classes.supTitle}>{supTitle}</Text>
 
       <Title className={classes.title} order={2}>
-        PharmLand is <span className={classes.highlight}>not</span> just for pharmacists
+        Conocer el agua <span className={classes.highlight}>no es</span> solo para los laboratorios y hospitales
       </Title>
 
       <Container size={660} p={0}>

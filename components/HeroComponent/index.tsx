@@ -1,13 +1,11 @@
-import React from 'react';
 import { Title, Text, Container, Button, Overlay, createStyles } from '@mantine/core';
-
+import bg from './bg.jpeg';
 const useStyles = createStyles((theme) => ({
   wrapper: {
     position: 'relative',
     paddingTop: 180,
     paddingBottom: 130,
-    backgroundImage:
-      'url(https://images.unsplash.com/photo-1573164713988-8665fc963095?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=980&q=80)',
+    backgroundImage: `url(https://www.fundacionaquae.org/wp-content/uploads/2014/08/drops-of-water-water-nature-liquid-40784.jpeg)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
 
@@ -100,22 +98,21 @@ export function HeroImageBackground() {
 
       <div className={classes.inner}>
         <Title className={classes.title}>
-          Automated AI code reviews for{' '}
+          Filtros de agua{' '}
           <Text component="span" inherit className={classes.highlight}>
-            any stack
+            Inteligentes
           </Text>
         </Title>
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained to detect lazy
-            developers who do nothing and just complain on Twitter.
+            Conoce más acerca del agua que consumes, su pH y su calidad.
           </Text>
         </Container>
 
         <div className={classes.controls}>
           <Button className={classes.control} variant="white" size="lg">
-            Get started
+            Saber más
           </Button>
           <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
             Live demo
