@@ -124,6 +124,8 @@ export function HeaderAction({ links }: HeaderActionProps) {
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
+        {/* Check if an user is logged or not */}
+        
           <Link href={'/login'}>
             <Button radius="xl" sx={{ height: 30 }}>
               Login

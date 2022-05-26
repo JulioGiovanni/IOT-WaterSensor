@@ -1,7 +1,36 @@
 import { Avatar, Container, Grid, ScrollArea, SimpleGrid, Skeleton, Space, Text, ThemeIcon, Timeline, Title, useMantineTheme } from '@mantine/core';
+import { useEffect, useState } from 'react';
+
 import { Sun, Video } from 'tabler-icons-react';
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const today = new Date();
+//Get the last 10 days
+const days = Array.from({ length: 10 }, (_, i) => new Date(today.getFullYear(), today.getMonth(), today.getDate() - i));
+console.log(days);
+//Days to array
+const daysArray = days.map(day => day.toLocaleDateString());
+
+
+// const [Turbidez, setTurbidez] = useState(0)
+// const [pH, setpH] = useState(0)
+
+// useEffect(() => {
+//   //Change the turbidez every 5 seconds
+//   const interval = setInterval(() => {
+//     setTurbidez(Math.floor(Math.random() * (500 - 5) + 1));
+//   }
+//     , 5000);
+//   //Change the pH every 5 seconds
+//   const interval2 = setInterval(() => {
+//     setpH(Math.floor(Math.random() * (10 - 5) + 1));
+//   }
+//     , 5000);
+//   return () => {
+//     clearInterval(interval);
+//     clearInterval(interval2);
+//   };
+
+// }, [])
 
 const PRIMARY_COL_HEIGHT = 300;
 
@@ -15,15 +44,18 @@ export default function LeadGrid() {
           <Grid.Col>
             <Title>
                 Estado Actual:
+
             </Title>
           </Grid.Col>
           <Grid.Col span={6}>
             <Title order={5}>
                 pH Actual:
             </Title>
+            <Text></Text>
           </Grid.Col>
           <Grid.Col span={6}>
-            <Title order={5}>Turbidez Actual:</Title>          
+            <Title order={5}>Turbidez Actual:</Title>
+            <Text></Text>          
         </Grid.Col>
         </Grid>
         <Space h={100}></Space>
@@ -37,14 +69,18 @@ export default function LeadGrid() {
         <Timeline style={{padding:20}}>
         {/* If you do not pass bullet prop, default bullet will be rendered */}
 
-        {arr.map(() => (
-            <Timeline.Item title="24/03/22" bulletSize={24}>
-            <Text color="dimmed" size="sm">
-              pH: 7
-              Turbidez: 600ppm
-            </Text>
-          </Timeline.Item>
-        ))}
+        {daysArray.map((day,index) => {
+
+          const turbidez = Math.floor(Math.random() * (600 - 1) + 1);
+         return(
+          <Timeline.Item key={index} title={day} bulletSize={24}>
+          <Text color="dimmed" size="sm">
+            pH: {Math.floor(Math.random() * (14 - 1) + 1)},
+            Turbidez: {turbidez}ppm
+          </Text>
+        </Timeline.Item>
+         )})}
+        
 
    
             </Timeline>

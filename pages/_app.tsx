@@ -7,6 +7,7 @@ import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core
 import { NotificationsProvider } from '@mantine/notifications';
 import { HeaderAction } from '../components/HeaderComponent';
 import { FooterLinks } from '../components/FooterComponent';
+import { AuthProvider } from '../context';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -22,7 +23,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     <>
    
       <Head>
-        <title>Mantine next example</title>
+        <title>AquaSystem</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
@@ -30,6 +31,9 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
         <MantineProvider theme={{ colorScheme:'dark' }} withGlobalStyles withNormalizeCSS>
           <NotificationsProvider>
+            <AuthProvider>
+
+            
           <HeaderAction 
             links={[
               {
@@ -51,6 +55,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                 },]
                 }
             />
+            </AuthProvider>
           </NotificationsProvider>
         </MantineProvider>
       </ColorSchemeProvider>
